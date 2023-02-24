@@ -1,0 +1,127 @@
+.article {
+    background-color: transparent;
+    height: fit-content;
+    &-header {
+        border-bottom: 1px solid #d0d1d3;
+        padding: 0px 1px 18px 1px;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: auto;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+    }
+
+    &-heading {
+        font-size: 28px;
+        font-weight: 300;
+    }
+
+    &-link {
+        font-weight: 300;
+        color: $blue;
+        text-decoration: none;
+    }
+
+    &-sub-list {
+        border:none;
+    }
+
+    &-wrapper {
+        padding: 51px;
+        background-color: #ffffff;
+    }
+}
+
+body {
+    margin: 0px;
+    background-color: #efeff0;
+}
+
+.content {
+    background-color: #efeff0;
+    padding: 25px 140px;
+    display: flex;
+}
+
+.navbar-app {
+    background-color: #ffffff;
+    padding: 15px 155px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.174);
+    align-items: center;
+
+    &-link {
+        display:flex;
+        justify-content: space-between;
+        padding: 0px 8px;
+        &:hover {
+            border-bottom: 0.1rem solid #009cda;
+            .dropdown-app-body {
+                display: flex;
+                z-index: 3;
+            }
+        }
+    }
+
+    a {
+        color: $darkGray;
+        font-family: $openSans;
+        text-decoration: none;
+    }
+
+}
+
+.sidebar {
+    background-color: transparent;
+    border-radius: 5px;
+    height: fit-content;
+
+    &-image {
+        width: auto;
+        height: 23px;
+    }
+
+    &-image-container {
+        min-width: 28px;
+    }
+
+    &-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-size: 1rem;
+        text-decoration: none;
+        padding: 14px 20px 14px 10px;
+        color: #2a2c30;
+        border-left: 4px solid transparent;
+        &:hover {
+            background-color: #F4F7F7;
+            border-left: 4px solid #00539f;
+        }
+        &:focus {
+            border-left: 4px solid #00539f;
+        }
+    }
+
+    .link {
+        color: #35aede;
+        text-decoration: none;
+        font-size: 0.9rem;
+        line-height: 1.1;
+        margin-bottom: 10px;
+
+        img {
+            height: 25px;
+            width: auto;
+            margin-right: 8px;
+        }
+
+    }
+
+}
