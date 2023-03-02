@@ -29,7 +29,7 @@ import { faGlobeAsia } from "@fortawesome/free-solid-svg-icons";
 class Navbar extends React.Component {
     render() {
         return (
-            <div className="row px-3 px-xl-4 px-xl-5">
+            <div className="row px-3 px-md-5">
                 <Logo image={logo} className="h-75" />
                 <div className="col-12 col-xl-8 px-4 px-xl-0 d-xl-flex align-items-xl-center">
                     <NavLink className="col-12 col-xl-3 py-1">
