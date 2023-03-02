@@ -1,6 +1,5 @@
 import React from "react";
 import { Collapse, ListGroup, ListGroupItem } from "reactstrap";
-import Link from "../components/Link";
 import CollapseList from "../components/CollapseList";
 import ListGroupItemBody from "../components/ListGroupItemBody";
 
@@ -11,56 +10,56 @@ class Article extends React.Component {
     render() {
         return(
             <div className={this.props.className}>
-                <div className="article-wrapper card">
-                    <div className="article-header">
-                        <span>
+                <div className="card px-2 py-5 px-md-5">
+                    <div className="h3 fw-light d-flex">
+                        <div>
                             <img src={globe} />
-                        </span>
-                        <span className="article-heading">Secure Internet and SaaS Access (ZIA) Help</span>
+                        </div>
+                        <div className="ps-2">Secure Internet and SaaS Access (ZIA) Help</div>
                     </div>
                     <div className="article-body">
                         <ListGroup flush className="border-bottom">
                             <CollapseList title="Getting Started">
                                 <ListGroup className="article-sub-list">
-                                    <ListGroupItem className="pb-0 no-border">
+                                    <ListGroupItem className="pb-0 border-0">
                                         <ListGroupItemBody
                                             href="#" 
                                             title="About the ZIA Cloud Architecture"
                                         />
                                     </ListGroupItem>
-                                    <ListGroupItem className="pb-0 no-border">
+                                    <ListGroupItem className="pb-0 border-0">
                                         <ListGroupItemBody
                                             href="#"
                                             title="Accessing and Using the Executive Insights App"
                                         />
                                     </ListGroupItem>
-                                    <ListGroupItem className="pb-0 no-border">
+                                    <ListGroupItem className="pb-0 border-0">
                                         <ListGroupItemBody
                                             href="#"
                                             title="Step-by-Step Configuration Guide for ZIA"
                                         />
                                     </ListGroupItem>
-                                    <CollapseList className="no-border pb-0" title="Admin Portal">
+                                    <CollapseList className="border-0 pb-0" title="Admin Portal">
                                         <ListGroup className="article-sub-list">
-                                            <ListGroupItem className="pb-0 no-border">
+                                            <ListGroupItem className="pb-0 border-0">
                                                 <ListGroupItemBody
                                                     href="#"
                                                     title="About the ZIA Admin Portal"
                                                 />
                                             </ListGroupItem>
-                                            <ListGroupItem className="pb-0 no-border">
+                                            <ListGroupItem className="pb-0 border-0">
                                                 <ListGroupItemBody
                                                     href="#"
                                                     title="What is my cloud name for ZIA?"
                                                 />
                                             </ListGroupItem>
-                                            <ListGroupItem className="pb-0 no-border">
+                                            <ListGroupItem className="pb-0 border-0">
                                                 <ListGroupItemBody
                                                     href="#"
                                                     title="Viewing Subscriptions"
                                                 />
                                             </ListGroupItem>
-                                            <ListGroupItem className="pb-0 no-border">
+                                            <ListGroupItem className="pb-0 border-0">
                                                 <ListGroupItemBody
                                                     href="#"
                                                     title="About Zscaler Date Privacy"
@@ -72,19 +71,19 @@ class Article extends React.Component {
                             </CollapseList>
                             <CollapseList title="Reference Architecture">
                                 <ListGroup className="article-sub-list">
-                                    <ListGroupItem className="pb-0 no-border">
+                                    <ListGroupItem className="pb-0 border-0">
                                         <ListGroupItemBody
                                             href="#"
                                             title="Deploying Zscaler Internet Access in CHINA"
                                         />
                                     </ListGroupItem>
-                                    <ListGroupItem className="pb-0 no-border">
+                                    <ListGroupItem className="pb-0 border-0">
                                         <ListGroupItemBody
                                             href="#"
                                             title="TLS/SSL Inspection with Zscaler Internet Access"
                                         />
                                     </ListGroupItem>
-                                    <ListGroupItem className="pb-0 no-border">
+                                    <ListGroupItem className="pb-0 border-0">
                                         <ListGroupItemBody
                                             href="#"
                                             title="Traffic Forwarding in Zscaler Internet Access"
@@ -94,12 +93,12 @@ class Article extends React.Component {
                             </CollapseList>
                             <CollapseList title="Authentication & Administration">
                                 <ListGroup>
-                                    <CollapseList className="no-border pb-0" title="Administrator & Role Management"></CollapseList>
-                                    <CollapseList className="no-border pb-0" title="User Management & Authentication Settings"></CollapseList>
-                                    <CollapseList className="no-border pb-0" title="Identity Proxy Settings"></CollapseList>
-                                    <CollapseList className="no-border pb-0" title="Alerts"></CollapseList>
-                                    <CollapseList className="no-border pb-0" title="End User Notifications"></CollapseList>
-                                    <CollapseList className="no-border pb-0" title="Backup & Restore"></CollapseList>
+                                    <CollapseList className="border-0 pb-0" title="Administrator & Role Management"></CollapseList>
+                                    <CollapseList className="border-0 pb-0" title="User Management & Authentication Settings"></CollapseList>
+                                    <CollapseList className="border-0 pb-0" title="Identity Proxy Settings"></CollapseList>
+                                    <CollapseList className="border-0 pb-0" title="Alerts"></CollapseList>
+                                    <CollapseList className="border-0 pb-0" title="End User Notifications"></CollapseList>
+                                    <CollapseList className="border-0 pb-0" title="Backup & Restore"></CollapseList>
                                 </ListGroup>
                             </CollapseList>
                             <CollapseList title="Traffic Forwarding"></CollapseList>

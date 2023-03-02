@@ -7,16 +7,16 @@ import { faFileAlt } from "@fortawesome/free-regular-svg-icons";
 class ListGroupItemBody extends React.Component {
     render() {
         return(
-            <>
-                <span>
-                    <FontAwesomeIcon icon={faFileAlt} className="list-icon" />
-                </span>
+            <div className="d-flex">
+                <div>
+                    <FontAwesomeIcon icon={faFileAlt} className="link me-2" />
+                </div>
                 <Link
                     href={this.props.href}
-                    className="article-link"
+                    className="text-decoration-none link fw-light"
                     text={this.props.title}
                     />
-            </>
+            </div>
         )
     }
 }

@@ -7,8 +7,10 @@ class Content extends React.Component {
     render() {
         return (
             <div className="content">
-                <Sidebar className="sidebar col-md-4 col-lg-3 ps-3" />
-                <Article className="article col-md-8 col-lg-9 ps-3" />
+                <div className="container row mx-auto">
+                    <Sidebar className="sidebar col-12 col-md-4 col-xl-3 pt-4" />
+                    <Article className="article col-12 col-md-8 col-xl-9 pt-4 pb-md-4" />
+                </div>
             </div>
         )
     }

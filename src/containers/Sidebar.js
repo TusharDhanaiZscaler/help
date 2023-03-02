@@ -40,58 +40,56 @@ const Sidebar = (props) => {
         }
     };
 
-    const border = {borderLeft: '4px solid #00539f'}
-
     return(
         <div className={props.className}>
             <Accordion open={open} toggle={toggle}>
                 <AccordionItem>
                     <AccordionHeader targetId="1">
-                        <span className="sidebar-image-container">
-                            <img src={docs} className="sidebar-image" />
+                        <span className="accordion-icon-container">
+                            <img src={docs} className="accordion-icon" />
                         </span>
-                        <span>Documentation</span>
+                        <span className="small text-dark">Documentation</span>
                     </AccordionHeader>
                     <AccordionBody accordionId="1">
                         <Link 
                             href="#" 
-                            className="link d-flex"
+                            className="link d-flex text-decoration-none small fw-light align-items-center py-1"
                             text="Secure Internet and SaaS Access (ZIA)"
                             image={globe}
                             />
                         <Link 
                             href="#" 
-                            className="link d-flex" 
+                            className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Secure Private Access (ZPA)"
                             image={docs2}
                             />
                         <Link 
                             href="#" 
-                            className="link d-flex" 
+                            className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Secure Internet and SaaS Access (ZIA)"
                             image={docs3}
                             />
                         <Link 
                             href="#" 
-                            className="link d-flex" 
+                            className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Secure Internet and SaaS Access (ZIA)"
                             image={docs4}
                             />
                         <Link 
                             href="#" 
-                            className="link d-flex" 
+                            className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Workload Segmentation (ZWS)"
                             image={docs5}
                             />
                         <Link 
                             href="#" 
-                            className="link d-flex" 
+                            className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Zscaler Connectors"
                             image={docs6}
                             />
                         <Link 
                             href="#" 
-                            className="link d-flex" 
+                            className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Data Protection"
                             image={docs7}
                             />
@@ -99,67 +97,67 @@ const Sidebar = (props) => {
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionHeader targetId="2">
-                        <span className="sidebar-image-container">
-                            <img src={support} className="sidebar-image" />
+                        <span className="accordion-icon-container">
+                            <img src={support} className="accordion-icon" />
                         </span>
-                        <span>Support</span>
+                        <span className="small text-dark">Support</span>
                     </AccordionHeader>
                     <AccordionBody accordionId="2">
                         <Link href="#" 
-                            className="link d-flex align-items-center" 
+                            className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Phone Support" 
                             image={support1} />
                         <Link href="#" 
-                            className="link d-flex align-items-center" 
+                            className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Login to See My Tickets"
                             image={support2} />
                         <Link href="#" 
-                            className="link d-flex align-items-center" 
+                            className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Submit Ticket"
                             image={support3} />
                     </AccordionBody>
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionHeader targetId="3">
-                        <span className="sidebar-image-container">
-                            <img src={profServices} className="sidebar-image" />
+                        <span className="accordion-icon-container">
+                            <img src={profServices} className="accordion-icon" />
                         </span>
-                        <span>Professional Services</span>
+                        <span className="small text-dark">Professional Services</span>
                     </AccordionHeader>
                     <AccordionBody accordionId="3">
                         <Link href="#" 
-                            className="link d-flex align-content-center" 
+                            className="link d-flex text-decoration-none small fw-light align-content-center py-1" 
                             text="Deployment Services"
                             image={profService1} />
                         <Link href="#" 
-                            className="link d-flex align-content-center" 
+                            className="link d-flex text-decoration-none small fw-light align-content-center py-1" 
                             text="Professional Services Credits"
                             image={profService2} />
                         <Link href="#" 
-                            className="link d-flex align-content-center" 
+                            className="link d-flex text-decoration-none small fw-light align-content-center py-1" 
                             text="Staff Augmentation"
                             image={profService3} />
                         <Link href="#" 
-                            className="link d-flex align-content-center" 
+                            className="link d-flex text-decoration-none small fw-light align-content-center py-1" 
                             text="Custom SOW"
                             image={profService4} />
                     </AccordionBody>
                 </AccordionItem>
                 <AccordionItem>
-                    <Link href="#" className="accordion-header sidebar-link" 
+                    <Link href="#" className="link text-dark text-decoration-none" 
                         text={
-                            <>
-                            <span className="sidebar-image-container"><img src={training} className="sidebar-image" /></span>
-                            <span>Training & Certification</span>
-                            </>
+                            <div className="accordion-link">
+                                <span className="accordion-icon-container"><img src={training} className="accordion-icon" /></span>
+                                <span className="small">Training & Certification</span>
+                            </div>
                         } />
                 </AccordionItem>
                 <AccordionItem>
-                    <Link href="#" className="accordion-header sidebar-link" text={
-                        <>
-                        <span className="sidebar-image-container"><img src={tools} className="sidebar-image" /></span>
-                        <span>Tools</span>
-                        </>
+                    <Link href="#" className="link text-dark text-decoration-none" text={
+                        <div className="accordion-link">
+                        <span className="accordion-icon-container"><img src={tools} className="accordion-icon" /></span>
+                        <span className="small">Tools</span>
+                        </div>
                     } />
                 </AccordionItem>
             </Accordion>

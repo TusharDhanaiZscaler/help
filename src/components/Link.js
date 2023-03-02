@@ -9,8 +9,10 @@ class Link extends React.Component {
                         href={this.props.href}
                         className={this.props.className}
                         >
-                        <div className="link-image-container"><img src={this.props.image} /></div>
-                        <div>{this.props.text}</div>
+                        <span className="link-image-container mx-2">
+                            <img src={this.props.image} className="img-fluid link-image" />
+                        </span>
+                        <span className="">{this.props.text}</span>
                     </a>
                 </div>
             )
