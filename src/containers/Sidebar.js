@@ -2,26 +2,21 @@ import React, { useState } from "react";
 
 import Link from "../components/Link";
 
-// images
-import globe from '../images/globe.svg';
-import docs2 from "../images/docs2.svg";
-import docs3 from "../images/docs3.svg";
-import docs4 from "../images/docs4.svg";
-import docs5 from "../images/docs5.svg";
-import docs6 from "../images/docs6.svg";
-import docs7 from "../images/docs7.svg";
-import docs from "../images/documentation.svg";
-import support from "../images/support.svg";
-import profServices from "../images/prof-service.svg";
-import training from "../images/training.svg";
-import tools from "../images/tools.svg";
-import support1 from "../images/support-1.svg";
-import support2 from "../images/support-2.svg";
-import support3 from "../images/support-3.svg";
-import profService1 from "../images/profService1.svg";
-import profService2 from "../images/profService2.svg";
-import profService3 from "../images/profService3.svg";
-import profService4 from "../images/profService4.svg";
+// function to import multiple files
+function importAll(r) {
+	let images = {};
+    // r.keys() returns an array of all possible requests
+    r.keys().forEach( item => {
+        // replace './' in the names of the images with '' and assign the item to the key created
+        images[item.replace('./', '')] = r(item); 
+    });
+	return images
+}
+
+// context which contains an array of all files present in 'images' directory
+const context = require.context('../images', false, /\.(png|jpe?g|svg)$/)
+// dropdown links images
+const images = importAll(context);
 
 import {
     Accordion,
@@ -46,7 +41,7 @@ const Sidebar = (props) => {
                 <AccordionItem>
                     <AccordionHeader targetId="1">
                         <span className="accordion-icon-container">
-                            <img src={docs} className="accordion-icon" />
+                            <img src={images["documentation.svg"].default} className="accordion-icon" />
                         </span>
                         <span className="small text-dark">Documentation</span>
                     </AccordionHeader>
@@ -55,50 +50,50 @@ const Sidebar = (props) => {
                             href="#" 
                             className="link d-flex text-decoration-none small fw-light align-items-center py-1"
                             text="Secure Internet and SaaS Access (ZIA)"
-                            image={globe}
+                            image={images['globe.svg'].default}
                             />
                         <Link 
                             href="#" 
                             className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Secure Private Access (ZPA)"
-                            image={docs2}
+                            image={images['docs2.svg'].default}
                             />
                         <Link 
                             href="#" 
                             className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Secure Internet and SaaS Access (ZIA)"
-                            image={docs3}
+                            image={images['docs3.svg'].default}
                             />
                         <Link 
                             href="#" 
                             className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Secure Internet and SaaS Access (ZIA)"
-                            image={docs4}
+                            image={images['docs4.svg'].default}
                             />
                         <Link 
                             href="#" 
                             className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Workload Segmentation (ZWS)"
-                            image={docs5}
+                            image={images['docs5.svg'].default}
                             />
                         <Link 
                             href="#" 
                             className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Zscaler Connectors"
-                            image={docs6}
+                            image={images['docs6.svg'].default}
                             />
                         <Link 
                             href="#" 
                             className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Data Protection"
-                            image={docs7}
+                            image={images['docs7.svg'].default}
                             />
                     </AccordionBody>
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionHeader targetId="2">
                         <span className="accordion-icon-container">
-                            <img src={support} className="accordion-icon" />
+                            <img src={images['support.svg'].default} className="accordion-icon" />
                         </span>
                         <span className="small text-dark">Support</span>
                     </AccordionHeader>
@@ -106,21 +101,21 @@ const Sidebar = (props) => {
                         <Link href="#" 
                             className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Phone Support" 
-                            image={support1} />
+                            image={images['support-1.svg'].default} />
                         <Link href="#" 
                             className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Login to See My Tickets"
-                            image={support2} />
+                            image={images['support-2.svg'].default} />
                         <Link href="#" 
                             className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Submit Ticket"
-                            image={support3} />
+                            image={images['support-3.svg'].default} />
                     </AccordionBody>
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionHeader targetId="3">
                         <span className="accordion-icon-container">
-                            <img src={profServices} className="accordion-icon" />
+                            <img src={images['prof-service.svg'].default} className="accordion-icon" />
                         </span>
                         <span className="small text-dark">Professional Services</span>
                     </AccordionHeader>
@@ -128,26 +123,28 @@ const Sidebar = (props) => {
                         <Link href="#" 
                             className="link d-flex text-decoration-none small fw-light align-content-center py-1" 
                             text="Deployment Services"
-                            image={profService1} />
+                            image={images['profService1.svg'].default} />
                         <Link href="#" 
                             className="link d-flex text-decoration-none small fw-light align-content-center py-1" 
                             text="Professional Services Credits"
-                            image={profService2} />
+                            image={images['profService2.svg'].default} />
                         <Link href="#" 
                             className="link d-flex text-decoration-none small fw-light align-content-center py-1" 
                             text="Staff Augmentation"
-                            image={profService3} />
+                            image={images['profService3.svg'].default} />
                         <Link href="#" 
                             className="link d-flex text-decoration-none small fw-light align-content-center py-1" 
                             text="Custom SOW"
-                            image={profService4} />
+                            image={images['profService4.svg'].default} />
                     </AccordionBody>
                 </AccordionItem>
                 <AccordionItem>
                     <Link href="#" className="link text-dark text-decoration-none" 
                         text={
                             <div className="accordion-link" tabIndex={0}>
-                                <span className="accordion-icon-container"><img src={training} className="accordion-icon" /></span>
+                                <span className="accordion-icon-container">
+                                    <img src={images['training.svg'].default} className="accordion-icon" />
+                                </span>
                                 <span className="small">Training & Certification</span>
                             </div>
                         } />
@@ -155,7 +152,9 @@ const Sidebar = (props) => {
                 <AccordionItem>
                     <Link href="#" className="link text-dark text-decoration-none" text={
                         <div className="accordion-link" tabIndex={0}>
-                        <span className="accordion-icon-container"><img src={tools} className="accordion-icon" /></span>
+                        <span className="accordion-icon-container">
+                            <img src={images['tools.svg'].default} className="accordion-icon" />
+                        </span>
                         <span className="small">Tools</span>
                         </div>
                     } />

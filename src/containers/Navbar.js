@@ -7,21 +7,21 @@ import Dropdown from "./Dropdown";
 // zscaler logo
 import logo from '../images/zscaler-logo.png';
 
+// function to import multiple files
+function importAll(r) {
+	let images = {};
+    // r.keys() returns an array of all possible requests
+    r.keys().forEach( item => {
+        // replace './' in the names of the images with '' and assign the item to the key created
+        images[item.replace('./', '')] = r(item); 
+    });
+	return images
+}
+
+// context which contains an array of all files present in 'images' directory
+const context = require.context('../images', false, /\.(png|jpe?g|svg)$/)
 // dropdown links images
-import globe from "../images/globe.svg";
-import spa from "../images/docs2.svg";
-import zdx from "../images/docs3.svg";
-import zws from "../images/docs4.svg";
-import zconnectors from "../images/docs5.svg";
-import dataProtection from "../images/docs6.svg";
-import threatProtection from "../images/docs7.svg";
-import support1 from "../images/support-1.svg";
-import support2 from "../images/support-2.svg";
-import support3 from "../images/support-3.svg";
-import profService1 from "../images/profService1.svg";
-import profService2 from "../images/profService2.svg";
-import profService3 from "../images/profService3.svg";
-import profService4 from "../images/profService4.svg";
+const images = importAll(context);
 
 //icon
 import { faGlobeAsia } from "@fortawesome/free-solid-svg-icons";
@@ -38,43 +38,43 @@ class Navbar extends React.Component {
                                 href="#" 
                                 className="text-decoration-none link d-flex fw-light small py-1" 
                                 text="Secure Internet and SaaS Access (ZIA)"
-                                image={globe}
+                                image={images["globe.svg"].default}
                             />
                             <Link 
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
                                 text="Secure Private Access (ZPA)"
-                                image={spa}
+                                image={images["docs2.svg"].default}
                             />
                             <Link 
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
                                 text="Digital Experience Monitoring (ZDX)"
-                                image={zdx}
+                                image={images['docs3.svg'].default}
                             />
                             <Link 
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
                                 text="Workload Segmentation (ZWS)"
-                                image={zws}
+                                image={images['docs4.svg'].default}
                             />
                             <Link 
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
                                 text="Zscaler Connectors"
-                                image={zconnectors}
+                                image={images['docs5.svg'].default}
                             />
                             <Link 
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
                                 text="Data Protection"
-                                image={dataProtection}
+                                image={images['docs6.svg'].default}
                             />
                             <Link 
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
                                 text="Threat Protection"
-                                image={threatProtection}
+                                image={images['docs7.svg'].default}
                             />
                         </Dropdown>
                     </NavLink>
@@ -83,15 +83,15 @@ class Navbar extends React.Component {
                             <Link 
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
-                                text="Phone Support" image={support1} />
+                                text="Phone Support" image={images['support-1.svg'].default} />
                             <Link 
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
-                                text="Login to See My Tickets" image={support2} />
+                                text="Login to See My Tickets" image={images['support-2.svg'].default} />
                             <Link 
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
-                                text="Submit Ticket" image={support3} />
+                                text="Submit Ticket" image={images['support-3.svg'].default} />
                         </Dropdown>
                     </NavLink>
                     <NavLink className="col-12 col-xl-3 py-1">
@@ -100,22 +100,22 @@ class Navbar extends React.Component {
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
                                 text="Deployment Services"
-                                image={profService1} />
+                                image={images['profService1.svg'].default} />
                             <Link 
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
                                 text="Professional Services Credits"
-                                image={profService2} />
+                                image={images['profService2.svg'].default} />
                             <Link 
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
                                 text="Staff Augmentation"
-                                image={profService3} />
+                                image={images['profService3.svg'].default} />
                             <Link 
                                 href="#" 
                                 className="text-decoration-none d-flex link fw-light small py-1" 
                                 text="Custom SOW"
-                                image={profService4} />
+                                image={images['profService4.svg'].default} />
                         </Dropdown>
                     </NavLink>
                     <NavLink className="col-12 col-xl-3 ms-xl-2 py-1 blue-bottom-border">
