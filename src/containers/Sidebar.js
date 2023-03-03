@@ -146,7 +146,7 @@ const Sidebar = (props) => {
                 <AccordionItem>
                     <Link href="#" className="link text-dark text-decoration-none" 
                         text={
-                            <div className="accordion-link">
+                            <div className="accordion-link" tabIndex={0}>
                                 <span className="accordion-icon-container"><img src={training} className="accordion-icon" /></span>
                                 <span className="small">Training & Certification</span>
                             </div>
@@ -154,7 +154,7 @@ const Sidebar = (props) => {
                 </AccordionItem>
                 <AccordionItem>
                     <Link href="#" className="link text-dark text-decoration-none" text={
-                        <div className="accordion-link">
+                        <div className="accordion-link" tabIndex={0}>
                         <span className="accordion-icon-container"><img src={tools} className="accordion-icon" /></span>
                         <span className="small">Tools</span>
                         </div>

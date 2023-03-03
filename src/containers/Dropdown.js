@@ -55,7 +55,9 @@ class Dropdown extends React.Component {
                 <div 
                     className="dropdown-toggle w-100 d-flex justify-content-between mx-xl-2
                         align-items-center justify-content-xl-start blue-bottom-border" 
-                    data-bs-toggle="dropdown">
+                    data-bs-toggle="dropdown"
+                    data-bs-auto-close='inside'
+                    >
                     {this.props.name}
                 </div>
                 <div className={dropdownVisibilityToggle}>{this.props.children}</div>
