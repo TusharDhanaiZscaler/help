@@ -7,21 +7,8 @@ import Dropdown from "./Dropdown";
 // zscaler logo
 import logo from '../images/zscaler-logo.png';
 
-// function to import multiple files
-function importAll(r) {
-	let images = {};
-    // r.keys() returns an array of all possible requests
-    r.keys().forEach( item => {
-        // replace './' in the names of the images with '' and assign the item to the key created
-        images[item.replace('./', '')] = r(item); 
-    });
-	return images
-}
-
-// context which contains an array of all files present in 'images' directory
-const context = require.context('../images', false, /\.(png|jpe?g|svg)$/)
 // dropdown links images
-const images = importAll(context);
+import images from "../images";
 
 //icon
 import { faGlobeAsia } from "@fortawesome/free-solid-svg-icons";

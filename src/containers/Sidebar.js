@@ -2,21 +2,11 @@ import React, { useState } from "react";
 
 import Link from "../components/Link";
 
-// function to import multiple files
-function importAll(r) {
-	let images = {};
-    // r.keys() returns an array of all possible requests
-    r.keys().forEach( item => {
-        // replace './' in the names of the images with '' and assign the item to the key created
-        images[item.replace('./', '')] = r(item); 
-    });
-	return images
-}
+// sidebar link images from default export
+import images from "../images";
 
-// context which contains an array of all files present in 'images' directory
-const context = require.context('../images', false, /\.(png|jpe?g|svg)$/)
-// dropdown links images
-const images = importAll(context);
+// importing named exports
+import { docs } from "../images";
 
 import {
     Accordion,
@@ -41,7 +31,7 @@ const Sidebar = (props) => {
                 <AccordionItem>
                     <AccordionHeader targetId="1">
                         <span className="accordion-icon-container">
-                            <img src={images["documentation.svg"].default} className="accordion-icon" />
+                            <img src={docs} className="accordion-icon" />
                         </span>
                         <span className="small text-dark">Documentation</span>
                     </AccordionHeader>
