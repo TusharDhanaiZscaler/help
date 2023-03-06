@@ -12,6 +12,7 @@ import images from "../images";
 
 //icon
 import { faGlobeAsia } from "@fortawesome/free-solid-svg-icons";
+import { Accordion, AccordionItem } from "reactstrap";
 
 class Navbar extends React.Component {
     render() {

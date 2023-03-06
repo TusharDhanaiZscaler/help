@@ -1,11 +1,11 @@
 import React from "react";
-import { Collapse, ListGroup, ListGroupItem } from "reactstrap";
+import { ListGroup, ListGroupItem } from "reactstrap";
 import CollapseList from "../components/CollapseList";
 import ListGroupItemBody from "../components/ListGroupItemBody";
 
 // images
 import globe from '../images/globe-gray.svg';
-import articleList from '../articles';
+import articleList from '../data/articles';
 
 const renderList = array => {
     return array.map( item => {

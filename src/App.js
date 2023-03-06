@@ -1,7 +1,7 @@
 import React from "react";
 
 // containers
-import Navbar from "./containers/Navbar";
+import Navbar from "./containers/NavbarAccordion";
 import Content from "./containers/Content";
 
 // style
