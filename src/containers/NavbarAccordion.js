@@ -39,14 +39,14 @@ const NavbarAccordion = (props) => {
     // }
 
     return(
-        <div className="row">
+        <div className="row app-navbar">
             <Logo image={logo} className="h-75" />
             <Accordion open={open} toggle={toggle} className="d-xl-flex col-12 col-xl-8">
                 <AccordionItem>
                     <AccordionHeader targetId="1">
                         <span className="small text-dark">Documentation</span>
                     </AccordionHeader>
-                    <AccordionBody accordionId="1">
+                    <AccordionBody accordionId="1" className="accordion-body-fixed">
                         <Link 
                             href="#" 
                             className="link d-flex text-decoration-none small fw-light align-items-center py-1"
@@ -95,7 +95,7 @@ const NavbarAccordion = (props) => {
                     <AccordionHeader targetId="2">
                         <span className="small text-dark">Support</span>
                     </AccordionHeader>
-                    <AccordionBody accordionId="2">
+                    <AccordionBody accordionId="2" className="accordion-body-fixed">
                         <Link href="#" 
                             className="link d-flex text-decoration-none small fw-light align-items-center py-1" 
                             text="Phone Support" 
@@ -114,7 +114,7 @@ const NavbarAccordion = (props) => {
                     <AccordionHeader targetId="3">
                         <span className="small text-dark">Professional Services</span>
                     </AccordionHeader>
-                    <AccordionBody accordionId="3">
+                    <AccordionBody accordionId="3" className="accordion-body-fixed">
                         <Link href="#" 
                             className="link d-flex text-decoration-none small fw-light align-content-center py-1" 
                             text="Deployment Services"
@@ -136,14 +136,14 @@ const NavbarAccordion = (props) => {
                 <AccordionItem>
                     <Link href="#" className="link text-dark text-decoration-none" 
                         text={
-                            <div className="accordion-link" tabIndex={0}>
+                            <div className="accordion-link blue-bottom-border" tabIndex={0}>
                                 <span className="small">Training & Certification</span>
                             </div>
                         } />
                 </AccordionItem>
                 <AccordionItem>
                     <Link href="#" className="link text-dark text-decoration-none" text={
-                        <div className="accordion-link" tabIndex={0}>
+                        <div className="accordion-link blue-bottom-border" tabIndex={0}>
                         <span className="small">Tools</span>
                         </div>
                     } />
